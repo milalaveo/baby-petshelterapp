@@ -12,6 +12,8 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+    env:
+      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
     defaults:
       run:
         working-directory: baby-petshelter
@@ -35,11 +37,11 @@ jobs:
 
       - name: Publish to Chromatic
         id: chromatic
-        if: ${{ secrets.CHROMATIC_PROJECT_TOKEN != '' }}
+        if: ${{ env.CHROMATIC_PROJECT_TOKEN != '' }}
         uses: chromaui/action@latest
         with:
           workingDir: baby-petshelter
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: ${{ env.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: baby-petshelter/storybook-static
           exitZeroOnChanges: true
           onlyChanged: true
