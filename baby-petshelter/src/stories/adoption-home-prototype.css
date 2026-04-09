@@ -1,0 +1,346 @@
+.adoption-shell {
+  min-height: 100vh;
+  padding: 32px;
+  color: #18231b;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.86), transparent 28%),
+    linear-gradient(135deg, #eef7ef, #f8fbf3 54%, #e4efe6);
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.adoption-hero,
+.adoption-layout {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.adoption-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.adoption-hero-copy,
+.adoption-hero-panel,
+.pet-grid-panel,
+.booking-panel,
+.pet-focus-card,
+.booking-state,
+.submitting-box,
+.confirmed-box {
+  border: 1px solid rgba(24, 35, 27, 0.1);
+  border-radius: 28px;
+  background: rgba(250, 255, 251, 0.84);
+  box-shadow: 0 24px 60px rgba(23, 55, 30, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.adoption-hero-copy,
+.adoption-hero-panel,
+.pet-grid-panel,
+.booking-panel,
+.pet-focus-card,
+.booking-state,
+.submitting-box,
+.confirmed-box {
+  padding: 24px;
+}
+
+.adoption-eyebrow,
+.section-label,
+.section-meta,
+.booking-field span,
+.adoption-field-error,
+.hero-panel-copy,
+.pet-card span,
+.pet-card p {
+  color: #5d6d60;
+}
+
+.adoption-eyebrow,
+.section-label,
+.booking-field span {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.adoption-shell h1,
+.adoption-shell h2,
+.adoption-shell strong,
+.adoption-shell button,
+.adoption-shell input,
+.adoption-shell select,
+.adoption-shell textarea {
+  font-family: inherit;
+}
+
+.adoption-shell h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 0.96;
+}
+
+.adoption-shell h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.adoption-lede,
+.hero-panel-copy,
+.pet-focus-card p,
+.booking-state p,
+.confirmed-box p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.adoption-filter-row,
+.booking-actions,
+.booking-split {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.adoption-filter-row {
+  margin-top: 18px;
+}
+
+.filter-pill,
+.primary-cta,
+.secondary-cta,
+.pet-card {
+  border: 0;
+  cursor: pointer;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    background-color 140ms ease;
+}
+
+.filter-pill,
+.secondary-cta {
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #18231b;
+}
+
+.filter-pill.active {
+  background: #2c8f5a;
+  color: white;
+  box-shadow: 0 16px 26px rgba(44, 143, 90, 0.22);
+}
+
+.adoption-hero-panel,
+.booking-panel {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.visit-badge,
+.pet-tag,
+.confirmation-pill {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.visit-badge,
+.pet-tag {
+  padding: 8px 12px;
+  background: rgba(44, 143, 90, 0.14);
+  color: #237146;
+  text-transform: capitalize;
+}
+
+.visit-badge.step-book {
+  background: rgba(59, 103, 166, 0.14);
+  color: #355f97;
+}
+
+.visit-badge.step-submitting {
+  background: rgba(150, 106, 39, 0.14);
+  color: #946419;
+}
+
+.visit-badge.step-confirmed,
+.confirmation-pill {
+  background: rgba(48, 128, 77, 0.14);
+  color: #246945;
+  padding: 9px 13px;
+}
+
+.hero-panel-title,
+.focus-title {
+  margin: 0;
+  font-weight: 700;
+  color: #18231b;
+}
+
+.adoption-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 24px;
+}
+
+.pet-grid-panel,
+.booking-panel {
+  align-content: start;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pet-card {
+  display: grid;
+  gap: 14px;
+  text-align: left;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.pet-card.selected,
+.pet-card:hover,
+.filter-pill:hover,
+.primary-cta:hover,
+.secondary-cta:hover {
+  transform: translateY(-1px);
+}
+
+.pet-card.selected {
+  box-shadow:
+    inset 0 0 0 1px rgba(44, 143, 90, 0.28),
+    0 18px 32px rgba(19, 58, 28, 0.12);
+}
+
+.pet-card-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.pet-card p {
+  margin: 0;
+}
+
+.pet-focus-card,
+.booking-state,
+.submitting-box,
+.confirmed-box {
+  display: grid;
+  gap: 10px;
+}
+
+.booking-form {
+  display: grid;
+  gap: 14px;
+}
+
+.booking-field {
+  display: grid;
+  gap: 8px;
+}
+
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(24, 35, 27, 0.14);
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #18231b;
+  outline: none;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.booking-field input:focus,
+.booking-field select:focus,
+.booking-field textarea:focus {
+  border-color: rgba(44, 143, 90, 0.8);
+  box-shadow: 0 0 0 4px rgba(44, 143, 90, 0.12);
+}
+
+.adoption-field-error {
+  font-size: 0.85rem;
+}
+
+.primary-cta {
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: #2c8f5a;
+  color: white;
+  box-shadow: 0 16px 26px rgba(44, 143, 90, 0.22);
+}
+
+.secondary-cta {
+  border: 1px solid rgba(24, 35, 27, 0.12);
+}
+
+.submitting-box {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.booking-spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #2c8f5a;
+  box-shadow: 0 0 0 rgba(44, 143, 90, 0.4);
+  animation: booking-pulse 1.3s infinite;
+}
+
+@keyframes booking-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(44, 143, 90, 0.38);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 14px rgba(44, 143, 90, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(44, 143, 90, 0);
+  }
+}
+
+@media (max-width: 920px) {
+  .adoption-shell {
+    padding: 18px;
+  }
+
+  .adoption-hero,
+  .adoption-layout,
+  .pet-grid,
+  .booking-split {
+    grid-template-columns: 1fr;
+  }
+
+  .section-top {
+    flex-direction: column;
+  }
+}
