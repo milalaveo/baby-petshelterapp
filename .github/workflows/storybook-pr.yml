@@ -44,7 +44,7 @@ jobs:
         with:
           workingDir: baby-petshelter
           projectToken: ${{ env.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: baby-petshelter/storybook-static
+          storybookBuildDir: storybook-static
           exitZeroOnChanges: true
           onlyChanged: true
 
